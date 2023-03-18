@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Fugaz+One&family=Kumbh+Sans&family=Lexend+Deca&family=Nunito&family=Outfit&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  h1, h2, h3 {
+    line-height: 1;
+  }
+
+:root {
+    /* Primary */
+--Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+--Transparent-white /* (paragraphs) */: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray /* (background, headings, buttons) */: hsl(0, 0%, 95%);
+
+    /* FONT FAMILY */
+--ff-accent: 'Big Shoulders Display', sans-serif;
+--ff-base: 'Lexend Deca', sans-serif;
+}
+
+/* Utility classes */
+html {
+    scroll-behavior: smooth;
+}
+
+.button {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2rem;
+    padding: 0.7rem;
+    margin-block: 0.5rem;
+    width: 70%;
+    text-transform: capitalize;
+    /* white-space: nowrap; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 50%;
+}
+
+.button:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+/* General styling */
+body {
+    font-family: var(--ff-base);
+    font-size: 15px;
+    min-height: 100vh;
+    background-color: var(--Very-light-gray);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTAINER */
+.container {
+    padding: 1.5rem;
+    height: max-content;
+}
+
+/* CARD */
+.card {
+    display: grid;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card__type {
+    display: grid;
+    grid-template-rows: 0.25fr 0.25fr 0.5fr auto;
+    max-width: 280px;
+    padding: 3rem;
+    gap: 2rem;
+    color: var(--Very-light-gray);
+}
+
+.card__type:first-child{
+    background-color: var(--Bright-orange);
+
+}
+
+.card__type:nth-child(2) {
+    background-color: var(--Dark-cyan);
+}
+
+.card__type:last-child {
+    background-color: var(--Very-dark-cyan);
+}
+
+.type__heading {
+    font-family: var(--ff-accent);
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.type__more {
+  display: grid;
+  align-items: center;
+}
+
+.button-sedans {
+    color: var(--Bright-orange)
+}
+.button-suvs {
+    color: var(--Dark-cyan);
+}
+.button-luxury {
+    color: var(--Very-dark-cyan);
+}
+
+@media screen and (min-width: 800px) {
+    .card {
+        display: flex;
+    }
+    .card__type {
+        gap: 2.5rem;
+    }
+    .button {
+      white-space: nowrap;
+      margin-block: 2rem;
+    }
+}
+
+
+
+
+
